@@ -1,4 +1,4 @@
-## 📱 Projeto em React Native
+## 📱 | Projeto React Native para consulta de CEPs.
 
 > Este repositório tem como foco armazenar o projeto **FindCep** desenvolvidos com **React Native**, com o objetivo de praticar e aprimorar habilidades em desenvolvimento mobile multiplataforma.
 
@@ -9,6 +9,8 @@
 - React Native
 - JavaScript
 - Expo
+
+
 
 
 
