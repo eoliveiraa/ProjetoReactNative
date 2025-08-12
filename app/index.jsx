@@ -1,6 +1,7 @@
 // import { ImageBackground } from "expo-image";
 import { Text, View, StyleSheet, ImageBackground, Image} from "react-native";
 import { Input } from '../componentes/input/input.jsx'
+import { Botao } from '../componentes/botao/botao.jsx'
 
 export default function Index() {
   return (
@@ -18,6 +19,7 @@ export default function Index() {
         {/*Input */}
         <Input/>
         {/*Botao*/}
+        <Botao tituloBotao='Consultar'/>
         {/*Card de informaçao*/}
       </View>
     </>
@@ -47,5 +49,6 @@ const styles = StyleSheet.create({
   },
   titulo: {
     fontSize: 25
-  }
+  },
+  
 })
