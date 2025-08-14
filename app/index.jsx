@@ -1,7 +1,9 @@
 // import { ImageBackground } from "expo-image";
-import { Text, View, StyleSheet, ImageBackground, Image} from "react-native";
+import { Text, View, StyleSheet, ImageBackground, Image } from "react-native";
 import { Input } from '../componentes/input/input.jsx'
 import { Botao } from '../componentes/botao/botao.jsx'
+import { Card } from '../componentes/card/card.jsx'
+import { ScrollView } from "react-native";
 
 export default function Index() {
   return (
@@ -13,15 +15,24 @@ export default function Index() {
       </ImageBackground>
 
       {/*Campo de comnsulta */}
-      <View style={styles.container}>
-        {/*Titulo*/}
-        <Text style={styles.titulo}>Consulte seu CEP</Text>
-        {/*Input */}
-        <Input/>
-        {/*Botao*/}
-        <Botao tituloBotao='Consultar'/>
-        {/*Card de informaçao*/}
-      </View>
+      <ScrollView style={styles.containerScroll}>
+        <View style={styles.container}>
+
+          {/*Titulo*/}
+          <Text style={styles.titulo}>Consulte seu CEP</Text>
+
+          {/*Input */}
+          <Input />
+
+          {/*Botao*/}
+          <Botao tituloBotao='Consultar' />
+
+          {/*Card de informaçao*/}
+          <Card />
+
+        </View>
+      </ScrollView>
+
     </>
   );
 }
@@ -41,14 +52,26 @@ const styles = StyleSheet.create({
 
   },
   container: {
-    flex: 1.5,
-    alignItems: "center",
-    paddingTop: 50,
-    paddingBottom: 50,
+    alignItems: 'center',
+    minHeight: "100%",
+    width: "100%",
     gap: 40
+    // flex: 1.5,
+    // paddingTop: 50,
+    // paddingBottom: 50,
   },
+
+  containerScroll: {
+    flex: 1.5,
+    paddingTop: 50,
+    paddingBottom: 200,
+    height: "100%"
+  },
+
   titulo: {
-    fontSize: 25
-  },
-  
+    fontFamily: 'Poppins-Bold',
+    fontSize: 22,
+    color: 'black'
+  }
+
 })
